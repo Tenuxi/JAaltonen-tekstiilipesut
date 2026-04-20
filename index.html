@@ -24,12 +24,12 @@
                     <li><a href="#yhteys">Yhteys</a></li>
                 </ul>
 
-                <div class="theme-switch-wrapper">
+                <!-- <div class="theme-switch-wrapper">
                     <label class="theme-switch" for="checkbox">
                         <input type="checkbox" id="checkbox" />
                         <div class="slider round"></div>
                     </label>
-                </div>
+                </div> -->
 
                 <div class="hamburger" id="hamburger">
                     <span></span>
@@ -80,6 +80,15 @@
                         <li>Laaja sisäpesu</li>
                     </ul>
                 </div>
+                <div class="glass-card">
+                    <div class="card-icon">🚐</div>
+                    <h3>Matkailuajoneuvot</h3>
+                    <p>Matkailuautojen ja asuntovaunujen pehmusteet, patjat ja verhoilut puhtaiksi ennen reissua.</p>
+                    <ul class="card-list">
+                        <li>Istuimet & patjat</li>
+                        <li>Koko sisätila</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -90,7 +99,7 @@
             
             <div class="price-list-vertical">
                 
-                <div class="price-section">
+                <div class="price-section glass-section">
                     <div class="price-header">
                         <span class="icon">🚗</span>
                         <h3>Autot</h3>
@@ -107,7 +116,7 @@
                     </table>
                 </div>
 
-                <div class="price-section">
+                <div class="price-section glass-section">
                     <div class="price-header">
                         <span class="icon">🏠</span>
                         <h3>Koti</h3>
@@ -132,7 +141,7 @@
                     </table>
                 </div>
 
-                <div class="price-section">
+                <div class="price-section glass-section">
                     <div class="price-header">
                         <span class="icon">⚓</span>
                         <h3>Veneet</h3>
@@ -149,7 +158,24 @@
                     </table>
                 </div>
 
-                <div class="price-section secondary">
+                <div class="price-section glass-section">
+                    <div class="price-header">
+                        <span class="icon">🚐</span>
+                        <h3>Matkailuajoneuvot</h3>
+                    </div>
+                    <table class="full-width-table">
+                        <tr>
+                            <td><strong>Istuimet & patjat</strong><br><small>Istuinryhmät ja nukkumapaikat</small></td>
+                            <td class="price">120–200 €</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Koko sisätilan tekstiilipesu</strong><br><small>Kaikki tekstiilipinnat</small></td>
+                            <td class="price">180–300 €</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="price-section glass-section">
                     <div class="price-header">
                         <span class="icon">✨</span>
                         <h3>Lisäpalvelut</h3>
@@ -166,7 +192,7 @@
                     </table>
                 </div>
 
-                <div class="price-section travel-section">
+                <div class="price-section travel-section glass-section">
                     <div class="price-header">
                         <span class="icon">📍</span>
                         <h3>Matkakulut</h3>
@@ -183,14 +209,77 @@
     </section>
 
     <footer id="yhteys">
-        <div class="container footer-content">
-            <div class="contact-info">
-                <h3>Jaaltonen Tekstiilipesut</h3>
-                <p>📍 Toimialue: [Kaupunki ja ympäristö]</p>
-                <p>📞 040 123 4567</p>
-                <p>📧 info@jaaltonen.fi</p>
+        <div class="container footer-grid">
+            
+            <div class="footer-info">
+                <h2>Ota yhteyttä</h2>
+                <p class="footer-description">Palvelemme joustavasti suoraan paikan päällä. Kysy tarjousta tai varaa aika!</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="icon">📍</span>
+                        <div>
+                            <strong>Toimialue</strong>
+                            <p>Länsi-Helsinki & lähikunnat</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📞</span>
+                        <div>
+                            <strong>Puhelin</strong>
+                            <p><a href="tel:+358445058569">044 505 8569</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📧</span>
+                        <div>
+                            <strong>Sähköposti</strong>
+                            <p><a href="mailto:jaaltonen86@gmail.com">jaaltonen86@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p class="copyright">&copy; 2026 Jaaltonen Tekstiilipesut</p>
+
+            <div class="footer-form">
+                <form id="contact-form" class="glass-section">
+                    <div class="form-group">
+                        <label for="name">Nimi</label>
+                        <input type="text" id="name" required placeholder="Oma nimesi">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Sähköposti</label>
+                        <input type="email" id="email" required placeholder="sahkoposti@esimerkki.fi">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Osoite (missä pesu suoritetaan?)</label>
+                        <input type="text" id="address" required placeholder="Katuosoite ja kaupunki">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Valitse palvelu</label>
+                        <select id="service" required>
+                            <option value="" disabled selected>Valitse palvelu...</option>
+                            <option value="Auto">Auto (Penkit / Sisäpesu)</option>
+                            <option value="Koti">Koti (Sohva / Matot)</option>
+                            <option value="Vene">Vene (Penkit / Sisäpesu)</option>
+                            <option value="Matkailuajoneuvo">Matkailuajoneuvo</option>
+                            <option value="Muu">Muu / Useampi kohde</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Toivottu päivämäärä</label>
+                        <input type="date" id="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Lisätiedot</label>
+                        <textarea id="message" rows="4" placeholder="Kerro tarkemmin kohteesta (esim. sohvan koko tai tahrojen laatu)"></textarea>
+                    </div>
+                    <button type="submit" class="cta-button submit-btn">Avaa sähköposti ja lähetä</button>
+                </form>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Jaaltonen Tekstiilipesut</p>
         </div>
     </footer>
 
