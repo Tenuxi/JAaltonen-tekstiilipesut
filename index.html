@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaaltonen Tekstiilipesut</title>
+    <link rel="stylesheet" href="styles.css">
+    <link id="theme-link" rel="stylesheet" href="light.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="main-header">
+        <nav class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo">
+            </div>
+            
+            <div class="nav-right">
+                <ul class="nav-links" id="nav-menu">
+                    <li><a href="#etusivu">Etusivu</a></li>
+                    <li><a href="#palvelut">Palvelut</a></li>
+                    <li><a href="#hinnasto">Hinnasto</a></li>
+                    <li><a href="#yhteys">Yhteys</a></li>
+                </ul>
+
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="etusivu" class="hero">
+        <div class="hero-mask"></div>
+        <div class="container hero-content">
+            <h1>Jaaltonen Tekstiilipesut</h1>
+            <p>Puhtaaksi suoraan paikan päällä.</p>
+            <a href="#palvelut" class="cta-button">Tutustu palveluihin</a>
+        </div>
+    </section>
+
+    <section id="palvelut" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Palvelumme</h2>
+            <div class="card-grid">
+                <div class="glass-card">
+                    <div class="card-icon">🚗</div>
+                    <h3>Autot</h3>
+                    <p>Syväpuhdistamme auton istuimet, lattiat ja verhoilut suoraan kotipihallasi tai työpaikallasi.</p>
+                    <ul class="card-list">
+                        <li>Penkkien pesu</li>
+                        <li>Koko sisäpesu</li>
+                    </ul>
+                </div>
+                <div class="glass-card">
+                    <div class="card-icon">🏠</div>
+                    <h3>Koti</h3>
+                    <p>Sohvat ja matot puhtaiksi ilman kuljetusvaivaa. Käytämme tehokkaita mutta hellävaraisia aineita.</p>
+                    <ul class="card-list">
+                        <li>Sohvapesut</li>
+                        <li>Mattojen puhdistus</li>
+                    </ul>
+                </div>
+                <div class="glass-card">
+                    <div class="card-icon">⚓</div>
+                    <h3>Veneet</h3>
+                    <p>Premium-tason tekstiilipesut veneisiin. Penkit ja sisätilat uuteen uskoon ennen kautta tai sen jälkeen.</p>
+                    <ul class="card-list">
+                        <li>Veneen penkit</li>
+                        <li>Laaja sisäpesu</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hinnasto" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Hinnasto</h2>
+            
+            <div class="price-list-vertical">
+                
+                <div class="price-section">
+                    <div class="price-header">
+                        <span class="icon">🚗</span>
+                        <h3>Autot</h3>
+                    </div>
+                    <table class="full-width-table">
+                        <tr>
+                            <td><strong>Penkkien pesu</strong><br><small>Kaikki istuimet</small></td>
+                            <td class="price">60–90 €</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Koko sisäpesu</strong><br><small>Penkit + lattiat + verhoilut</small></td>
+                            <td class="price">130–180 €</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="price-section">
+                    <div class="price-header">
+                        <span class="icon">🏠</span>
+                        <h3>Koti</h3>
+                    </div>
+                    <table class="full-width-table">
+                        <tr>
+                            <td><strong>Sohva (2–3 ist.)</strong><br><small>Perus tekstiilisohva</small></td>
+                            <td class="price">80–120 €</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kulmasohva</strong><br><small>Isompi kokonaisuus</small></td>
+                            <td class="price">120–180 €</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Matto (pieni)</strong><br><small>Käytävämatto tms.</small></td>
+                            <td class="price">20–40 €</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Matto (iso)</strong><br><small>Olohuoneen matto</small></td>
+                            <td class="price">40–80 €</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="price-section">
+                    <div class="price-header">
+                        <span class="icon">⚓</span>
+                        <h3>Veneet</h3>
+                    </div>
+                    <table class="full-width-table">
+                        <tr>
+                            <td><strong>Veneen penkit</strong><br><small>Peruspesu</small></td>
+                            <td class="price">120–220 €</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Veneen sisäpesu</strong><br><small>Laajempi kokonaisuus</small></td>
+                            <td class="price">180–350 €</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="price-section secondary">
+                    <div class="price-header">
+                        <span class="icon">✨</span>
+                        <h3>Lisäpalvelut</h3>
+                    </div>
+                    <table class="full-width-table">
+                        <tr>
+                            <td>Erittäin likainen kohde</td>
+                            <td class="price">+20–50 €</td>
+                        </tr>
+                        <tr>
+                            <td>Hajunpoisto (otsonointi/käsittely)</td>
+                            <td class="price">20–40 €</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="price-section travel-section">
+                    <div class="price-header">
+                        <span class="icon">📍</span>
+                        <h3>Matkakulut</h3>
+                    </div>
+                    <div class="travel-details">
+                        <p><strong>Helsinki:</strong> Sisältyy hintaan</p>
+                        <p><strong>Lähialue (Espoo, Vantaa, jne.):</strong> 20–30 €</p>
+                        <p><strong>Kauemmas:</strong> Sopimuksen mukaan</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="yhteys">
+        <div class="container footer-content">
+            <div class="contact-info">
+                <h3>Jaaltonen Tekstiilipesut</h3>
+                <p>📍 Toimialue: [Kaupunki ja ympäristö]</p>
+                <p>📞 040 123 4567</p>
+                <p>📧 info@jaaltonen.fi</p>
+            </div>
+            <p class="copyright">&copy; 2026 Jaaltonen Tekstiilipesut</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
