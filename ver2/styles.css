@@ -24,6 +24,43 @@ nav {
 
 .logo { color: var(--dark-blue); font-weight: bold; font-size: 1.4rem; }
 
+/* Logon tyylittely */
+#nav-logo {
+    height: 50px; /* Säädä korkeutta tarpeen mukaan */
+    width: auto;
+    display: block;
+}
+
+/* Navigaatiolinkkien hover-efekti */
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--light-blue); /* Vaihtaa tekstin värin vaaleansiniseksi */
+}
+
+/* Alaviiva-efekti hoverissa */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--light-blue);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Viiva liukuu koko tekstin alle */
+}
+
 /* Hampurilaisvalikko */
 .menu-toggle {
     display: block; /* Näkyy mobiilissa oletuksena */
@@ -99,12 +136,149 @@ nav {
     box-shadow: 0 15px 35px rgba(0,0,0,0.35);
 }
 
+/* Palvelukortin kuva */
+.card-image {
+    margin: -25px -25px 20px -25px; /* Poistaa kortin pehmusteen vaikutuksen kuvalta */
+    height: 180px;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.1); /* Pieni suurennusefekti kuvassa hoverilla */
+}
+
+/* Mukautetut listamerkit (Väkäset) */
+.custom-list {
+    list-style: none; /* Poistetaan oletuspallot */
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.custom-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+}
+
+.custom-list li::before {
+    content: "➤"; /* Väkänen */
+    position: absolute;
+    left: 0;
+    color: var(--light-blue);
+    font-size: 0.9rem;
+}
+
 .parallax {
     height: 300px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* Hinnastokorttien erityistyylit */
+.price-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keskittää sisällön */
+    text-align: center;
+}
+
+.price-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    background: #f0f7fa;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--dark-blue);
+}
+
+.price-card h3 {
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--light-blue);
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+/* Taulukon tyylittely */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.price-table th {
+    text-align: left;
+    color: var(--dark-blue);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.price-table td {
+    text-align: left;
+    padding: 12px 0;
+    border-bottom: 1px solid #f9f9f9;
+    vertical-align: top;
+}
+
+.price-table td:last-child {
+    text-align: right;
+    font-weight: bold;
+    color: var(--dark-blue);
+    white-space: nowrap;
+}
+
+.price-table small {
+    color: #777;
+    font-weight: normal;
+}
+
+.price-icon {
+    font-size: 2.5rem; /* Hieman pienempi kuin emojit, koska nämä ovat tarkempia */
+    color: var(--dark-blue); /* Brändin tummansininen */
+    background: #f0f7fa; /* Kevyt sinertävä tausta kuten aiemmin */
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Lisäpalvelut lohkot */
+.extra-services {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.extra-box {
+    background: #f4f8fb;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid var(--light-blue);
+}
+
+.extra-box h4 {
+    color: var(--dark-blue);
+    margin-bottom: 10px;
 }
 
 .btn {
@@ -120,6 +294,171 @@ nav {
 }
 
 /* Footer & Lomake */
+
+/* Footerin vasen reuna */
+.footer-left h2 {
+    font-size: 1.8rem;
+    color: var(--dark-blue);
+    margin-bottom: 5px;
+}
+
+.footer-intro {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.contact-info {
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.contact-item .icon {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    width: 25px;
+    text-align: center;
+}
+
+.contact-item p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+}
+
+/* Yhteystieto-osion ikonien tyylitys */
+.contact-item .icon {
+    font-size: 1.1rem;
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+    background: #f0f7fa; /* Sama vaalean sinertävä tausta kuin hinnastossa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--dark-blue);
+}
+
+/* Yhteystietolinkkien tyylit ja hover-efekti */
+.contact-link {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--light-blue);
+}
+
+/* Sama alaviiva-efekti kuin navigaatiossa */
+.contact-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--light-blue);
+    transition: width 0.3s ease;
+}
+
+.contact-link:hover::after {
+    width: 100%;
+}
+
+/* Kartta ja painike */
+.map-container {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.maps-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--white);
+    color: var(--light-blue);
+    padding: 8px 15px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 1px solid var(--light-blue);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.maps-btn:hover {
+    background: var(--light-blue);
+    color: var(--white);
+}
+
+/* Lomakkeen ryhmittely ja labelit */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: var(--dark-blue);
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.footer-right input, 
+.footer-right select, 
+.footer-right textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.footer-right input:focus, 
+.footer-right select:focus, 
+.footer-right textarea:focus {
+    outline: none;
+    border-color: var(--light-blue);
+    box-shadow: 0 0 5px rgba(63, 167, 214, 0.2);
+}
+
+/* Lähetä-painikkeen hienosäätö */
+.footer-right .btn {
+    width: 100%;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Footerin alin keskitetty lohko */
+.footer-bottom {
+    text-align: center; /* Keskittää tekstin horisontaalisesti */
+    margin-top: 50px; /* Lisää väliä lomakkeen ja tekstin väliin */
+    padding-top: 25px; /* Lisää tilaa viivan ja tekstin väliin */
+    border-top: 1px solid #ddd; /* Lisää hienovaraisen erotusviivan */
+    width: 100%;
+}
+
+.footer-bottom p {
+    color: #777; /* Harmaampi sävy, jotta se ei hyppää silmille */
+    font-size: 0.9rem;
+    margin: 0;
+}
+
 footer { background: #f9f9f9; padding: 40px 5% 20px; }
 .footer-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
 form input, form select, form textarea {

@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jaaltonentekstiilipesut.fi/"> <meta property="og:title" content="JAaltonen Tekstiilipesut – Puhtaaksi suoraan paikan päällä">
+    <meta property="og:description" content="Ammattimaiset tekstiilipesut autoille, veneille ja matkailuajoneuvoille Länsi-Helsingin alueella. Tilaa pesu kotiin tai työpaikalle!">
+    <meta property="og:image" content="https://www.jaaltonentekstiilipesut.fi/img/og-share-image.jpg"> <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jaaltonentekstiilipesut.fi/">
+    <meta property="twitter:title" content="JAaltonen Tekstiilipesut">
+    <meta property="twitter:description" content="Ammattimaiset tekstiilipesut autoille, veneille ja matkailuajoneuvoille suoraan paikan päällä.">
+    <meta property="twitter:image" content="https://www.jaaltonentekstiilipesut.fi/img/og-share-image.jpg">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JAaltonen Tekstiilipesut</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <nav>
-        <div class="logo">JAaltonen Tekstiilipesut</div>
+        <div class="logo">
+            <a href="#home">
+                <img src="img/logo.png" alt="JAaltonen Tekstiilipesut" id="nav-logo">
+            </a>
+        </div>
         <div class="menu-toggle" id="mobile-menu">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -36,25 +51,36 @@
         <h2 class="section-title">Palvelut</h2>
         <div class="grid">
             <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&q=80&w=600" alt="Auton pesu">
+                </div>
                 <h3>Autot</h3>
-                <p>Syväpuhdistamme auton istuimet, lattiat ja verhoilut suoraan kotipihallasi tai työpaikallasi.</p>
-                <ul>
+                <p>Puhdistamme auton istuimet, lattiat ja verhoilut suoraan kotipihallasi tai työpaikallasi.</p>
+                <ul class="custom-list">
                     <li>Penkkien pesu</li>
                     <li>Koko sisäpesu</li>
                 </ul>
             </div>
+            
             <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=600" alt="Veneen pesu">
+                </div>
                 <h3>Veneet</h3>
                 <p>Tekstiilipesut veneisiin. Penkit ja sisätilat uuteen uskoon ennen kautta tai sen jälkeen.</p>
-                <ul>
+                <ul class="custom-list">
                     <li>Veneen penkit</li>
                     <li>Veneen patjat</li>
                 </ul>
             </div>
+            
             <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&q=80&w=600" alt="Matkailuauto">
+                </div>
                 <h3>Matkailuajoneuvot</h3>
                 <p>Matkailuautojen ja asuntovaunujen pehmusteet, patjat ja verhoilut puhtaiksi ennen reissua.</p>
-                <ul>
+                <ul class="custom-list">
                     <li>Istuimet & patjat</li>
                     <li>Koko sisätila</li>
                 </ul>
@@ -68,25 +94,85 @@
         <h2 class="section-title">Hinnasto</h2>
         <div class="grid">
             <div class="card price-card">
+                <div class="price-icon"><i class="fa-solid fa-car-side"></i></div>
                 <h3>AUTOT</h3>
                 <table class="price-table">
-                    <tr><td>Penkkien pesu</td><td>90-120 €</td></tr>
-                    <tr><td>Koko sisäpesu</td><td>130–180 €</td></tr>
+                    <thead>
+                        <tr>
+                            <th>Palvelu</th>
+                            <th>Hinta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Penkkien pesu <br><small>Kaikki istuimet</small></td>
+                            <td>90–120 €</td>
+                        </tr>
+                        <tr>
+                            <td>Koko sisäpesu <br><small>Penkit, lattiat & verhoilut</small></td>
+                            <td>130–180 €</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
+
             <div class="card price-card">
+                <div class="price-icon"><i class="fa-solid fa-ship"></i></div>
                 <h3>VENEET</h3>
                 <table class="price-table">
-                    <tr><td>Veneen penkit</td><td>120–220 €</td></tr>
-                    <tr><td>Veneen patjat</td><td>180–350 €</td></tr>
+                    <thead>
+                        <tr>
+                            <th>Palvelu</th>
+                            <th>Hinta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Veneen penkit <br><small>Peruspesu</small></td>
+                            <td>120–220 €</td>
+                        </tr>
+                        <tr>
+                            <td>Veneen patjat <br><small>Peruspesu</small></td>
+                            <td>180–350 €</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
+
             <div class="card price-card">
+                <div class="price-icon"><i class="fa-solid fa-caravan"></i></div>
                 <h3>MATKAILUAUTOT</h3>
                 <table class="price-table">
-                    <tr><td>Istuimet & patjat</td><td>140–220 €</td></tr>
-                    <tr><td>Koko sisätila</td><td>220–300 €</td></tr>
+                    <thead>
+                        <tr>
+                            <th>Palvelu</th>
+                            <th>Hinta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Istuimet & patjat</td>
+                            <td>140–220 €</td>
+                        </tr>
+                        <tr>
+                            <td>Koko sisätila <br><small>Sisältää lattiamaton</small></td>
+                            <td>220–300 €</td>
+                        </tr>
+                    </tbody>
                 </table>
+            </div>
+        </div>
+
+        <div class="extra-services">
+            <div class="extra-box">
+                <h4>Lisäpalvelut</h4>
+                <p>Erittäin likainen kohde: <strong>20–100 €</strong></p>
+            </div>
+            <div class="extra-box">
+                <h4>Toimialue & Matkakulut</h4>
+                <p>Helsinki (ydinalue): <strong>Sisältyy hintaan</strong></p>
+                <p>Lähialue (Espoo, Vantaa, jne.): <strong>20–30 €</strong></p>
+                <p>Kauemmas: <strong>Sopimuksen mukaan</strong></p>
             </div>
         </div>
     </section>
@@ -94,26 +180,73 @@
     <footer id="yhteys">
         <div class="footer-container">
             <div class="footer-left">
-                <h3>Ota yhteyttä</h3>
-                <p>Palvelemme joustavasti suoraan paikan päällä.</p>
-                <p>📍 Länsi-Helsinki & lähikunnat</p>
-                <p>📞 044 505 8569</p>
-                <p>📧 jaaltonen86@gmail.com</p>
-                <div class="map-placeholder">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15871.49247656623!2d24.84587885!3d60.2263435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920a233346d3b3%3A0x2600b970633b4991!2zUGl0asOkbm3DpGtpLCBIZWxzaW5raQ!5e0!3m2!1sfi!2sfi!4v1715000000000!5m2!1sfi!2sfi" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <h2>Ota yhteyttä</h2>
+                <p class="footer-intro">Palvelemme joustavasti suoraan paikan päällä.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                        <p>Länsi-Helsinki & lähikunnat</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+358445058569" class="contact-link">044 505 8569</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:jaaltonen86@gmail.com" class="contact-link">jaaltonen86@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15871.32832863488!2d24.84277715!3d60.2222222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920ef0d195f2d5%3A0x2600b0d37e296231!2zUGl0w6Rqw6RubMOka2ksIEhlbHNpbmtp!5e0!3m2!1sfi!2sfi!4v1713800000000!5m2!1sfi!2sfi" 
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <a href="https://maps.app.goo.gl/..." target="_blank" class="maps-btn">Avaa Mapsissa ↗</a>
                 </div>
             </div>
             <div class="footer-right">
                 <form action="mailto:jaaltonen86@gmail.com" method="post" enctype="text/plain">
-                    <input type="text" name="Nimi" placeholder="Oma nimesi" required>
-                    <input type="email" name="Email" placeholder="Sähköposti" required>
-                    <input type="text" name="Osoite" placeholder="Missä pesu suoritetaan?" required>
-                    <select name="Palvelu">
-                        <option>Auton penkit</option>
-                        <option>Veneen penkit</option>
-                        <option>Koko sisätila</option>
-                    </select>
-                    <textarea name="Lisätiedot" placeholder="Lisätiedot"></textarea>
+                    <div class="form-group">
+                        <label for="nimi">Nimi</label>
+                        <input type="text" id="nimi" name="Nimi" placeholder="Oma nimesi" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Sähköposti</label>
+                        <input type="email" id="email" name="Email" placeholder="esim. matti@esimerkki.fi" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="osoite">Osoite</label>
+                        <input type="text" id="osoite" name="Osoite" placeholder="Missä pesu suoritetaan?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="palvelu">Valitse palvelu</label>
+                        <select id="palvelu" name="Palvelu">
+                            <option value="" disabled selected>Valitse palvelu</option>
+                            <option value="Auton penkit">Auton penkit</option>
+                            <option value="Auton verhoilut">Auton verhoilut</option>
+                            <option value="Veneen penkit">Veneen penkit</option>
+                            <option value="Veneen patjat">Veneen patjat</option>
+                            <option value="Asuntoauton istuimet & Patjat">Asuntoauton istuimet & Patjat</option>
+                            <option value="Asuntovaunun Patjat">Asuntovaunun Patjat</option>
+                            <option value="Asuntoauton/Vaunun Koko sisätila">Asuntoauton/Vaunun Koko sisätila</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pvm">Toivottu päivämäärä</label>
+                        <input type="date" id="pvm" name="Pvm">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lisatiedot">Lisätiedot</label>
+                        <textarea id="lisatiedot" name="Lisätiedot" placeholder="Kirjoita tähän vapaamuotoisesti lisätietoja"></textarea>
+                    </div>
+
                     <button type="submit" class="btn">LÄHETÄ</button>
                 </form>
             </div>
