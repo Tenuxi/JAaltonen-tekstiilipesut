@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAaltonen Tekstiilipesut</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">JAaltonen Tekstiilipesut</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Etusivu</a></li>
+            <li><a href="#palvelut">Palvelut</a></li>
+            <li><a href="#hinnasto">Hinnasto</a></li>
+            <li><a href="#yhteys">Yhteys</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero" style="background: linear-gradient(rgba(11, 60, 93, 0.7), rgba(11, 60, 93, 0.7)), url('https://images.unsplash.com/photo-1552650272-b8a34e21bc4b?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;">
+        <div class="hero-content">
+            <h1>Jaaltonen Tekstiilipesut</h1>
+            <p>Puhtaaksi suoraan paikan päällä.</p>
+            <a href="#palvelut" class="btn">Tutustu palveluihin</a>
+        </div>
+    </header>
+
+    <section id="palvelut" class="section">
+        <h2 class="section-title">Palvelut</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Autot</h3>
+                <p>Syväpuhdistamme auton istuimet, lattiat ja verhoilut suoraan kotipihallasi tai työpaikallasi.</p>
+                <ul>
+                    <li>Penkkien pesu</li>
+                    <li>Koko sisäpesu</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Veneet</h3>
+                <p>Tekstiilipesut veneisiin. Penkit ja sisätilat uuteen uskoon ennen kautta tai sen jälkeen.</p>
+                <ul>
+                    <li>Veneen penkit</li>
+                    <li>Veneen patjat</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Matkailuajoneuvot</h3>
+                <p>Matkailuautojen ja asuntovaunujen pehmusteet, patjat ja verhoilut puhtaiksi ennen reissua.</p>
+                <ul>
+                    <li>Istuimet & patjat</li>
+                    <li>Koko sisätila</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="parallax" style="background-image: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80&w=1600');"></div>
+
+    <section id="hinnasto" class="section">
+        <h2 class="section-title">Hinnasto</h2>
+        <div class="grid">
+            <div class="card price-card">
+                <h3>AUTOT</h3>
+                <table class="price-table">
+                    <tr><td>Penkkien pesu</td><td>90-120 €</td></tr>
+                    <tr><td>Koko sisäpesu</td><td>130–180 €</td></tr>
+                </table>
+            </div>
+            <div class="card price-card">
+                <h3>VENEET</h3>
+                <table class="price-table">
+                    <tr><td>Veneen penkit</td><td>120–220 €</td></tr>
+                    <tr><td>Veneen patjat</td><td>180–350 €</td></tr>
+                </table>
+            </div>
+            <div class="card price-card">
+                <h3>MATKAILUAUTOT</h3>
+                <table class="price-table">
+                    <tr><td>Istuimet & patjat</td><td>140–220 €</td></tr>
+                    <tr><td>Koko sisätila</td><td>220–300 €</td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer id="yhteys">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>Ota yhteyttä</h3>
+                <p>Palvelemme joustavasti suoraan paikan päällä.</p>
+                <p>📍 Länsi-Helsinki & lähikunnat</p>
+                <p>📞 044 505 8569</p>
+                <p>📧 jaaltonen86@gmail.com</p>
+                <div class="map-placeholder">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15871.49247656623!2d24.84587885!3d60.2263435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920a233346d3b3%3A0x2600b970633b4991!2zUGl0asOkbm3DpGtpLCBIZWxzaW5raQ!5e0!3m2!1sfi!2sfi!4v1715000000000!5m2!1sfi!2sfi" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="footer-right">
+                <form action="mailto:jaaltonen86@gmail.com" method="post" enctype="text/plain">
+                    <input type="text" name="Nimi" placeholder="Oma nimesi" required>
+                    <input type="email" name="Email" placeholder="Sähköposti" required>
+                    <input type="text" name="Osoite" placeholder="Missä pesu suoritetaan?" required>
+                    <select name="Palvelu">
+                        <option>Auton penkit</option>
+                        <option>Veneen penkit</option>
+                        <option>Koko sisätila</option>
+                    </select>
+                    <textarea name="Lisätiedot" placeholder="Lisätiedot"></textarea>
+                    <button type="submit" class="btn">LÄHETÄ</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Jaaltonen Tekstiilipesut</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
