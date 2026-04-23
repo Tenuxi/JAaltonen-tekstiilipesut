@@ -196,6 +196,36 @@ nav {
     background: linear-gradient(rgba(11, 60, 93, 0.7), rgba(11, 60, 93, 0.7));
 }
 
+#info-section {
+    background-color: #fcfcfc; /* Hieman eri sävy erottamaan muista osioista */
+    border-top: 1px solid #eee;
+}
+
+.info-content {
+    max-width: 800px; /* Pidetään teksti kapeampana luettavuuden vuoksi */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.info-text p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.8;
+}
+
+.info-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Mobiilisäätö */
+@media (max-width: 768px) {
+    .info-text p {
+        font-size: 1rem;
+        text-align: left; /* Mobiilissa vasen tasaus on usein luettavampi */
+    }
+}
+
 /* Hinnastokorttien erityistyylit */
 .price-card {
     display: flex;
